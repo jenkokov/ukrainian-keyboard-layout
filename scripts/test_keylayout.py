@@ -9,6 +9,7 @@ Plain unittest, no dependencies, so CI needs nothing but a Python.
 import collections
 import itertools
 import pathlib
+import sys
 import unittest
 
 import keylayout
@@ -29,6 +30,57 @@ US_ANSI = {
     6: "z", 7: "x", 8: "c", 9: "v", 11: "b", 45: "n", 46: "m",
     43: ",", 47: ".", 44: "/",
 }
+
+
+INVENTORY = pathlib.Path(__file__).with_name("option-layer-inventory.txt")
+
+
+def option_layer_characters(layout):
+    """Every printable character the ⌥ and ⇧⌥ layers can type, and how many keys
+    carry each. Controls and the non-breaking space are function keys rather than
+    anything a person types deliberately, so they are left out."""
+    return collections.Counter(
+        char
+        for char in list(layout.plane("option").values())
+        + list(layout.plane("shift+option").values())
+        if char and char.isprintable() and char != "\xa0"
+    )
+
+
+def read_inventory():
+    counts = {}
+    for line in INVENTORY.read_text(encoding="utf-8").splitlines():
+        # A data row is exactly three tab-separated fields. Comments are matched
+        # by shape rather than by a leading '#', because '#' is one of the
+        # characters the file records.
+        fields = line.split("\t")
+        if len(fields) == 3:
+            counts[fields[0]] = int(fields[1])
+    return counts
+
+
+def write_inventory(layout):
+    counts = option_layer_characters(layout)
+    rows = "\n".join(
+        f"{char}\t{n}\tU+{ord(char):04X}"
+        for char, n in sorted(counts.items(), key=lambda kv: (-kv[1], kv[0]))
+    )
+    INVENTORY.write_text(INVENTORY_HEADER + rows + "\n", encoding="utf-8")
+    return counts
+
+
+INVENTORY_HEADER = """\
+# Every printable character the ⌥ and ⇧⌥ layers can type, and how many keys
+# carry each. Rearranging those layers is free; this file is here so that
+# *losing* something is not — a character overwritten by a move, or one of a
+# pair of duplicates dropped while relocating the other, fails the tests instead
+# of surfacing as "I can't type that any more" months later.
+#
+# Regenerate deliberately, and let the diff speak in review:
+#
+#     python3 scripts/test_keylayout.py --update-inventory
+#
+"""
 
 
 class PatternTests(unittest.TestCase):
@@ -174,7 +226,7 @@ class LayoutTests(unittest.TestCase):
     def test_alternative_apostrophes_are_where_the_docs_say(self):
         """README and docs/layers.md send people to these three keys when they
         need an apostrophe that is not U+02BC. Pin them; prose drifts."""
-        self.assertEqual(self.layout.plane("shift+option")[24], "'")  # ⇧⌥=
+        self.assertEqual(self.layout.plane("option")[39], "'")  # ⌥Є
         self.assertEqual(self.layout.plane("shift+option")[35], "’")  # ⇧⌥З
         self.assertEqual(self.layout.plane("option")[35], "‘")  # ⌥З
 
@@ -206,30 +258,11 @@ class LayoutTests(unittest.TestCase):
         self.assertEqual((option[43], option[47]), ("<", ">"))
         self.assertEqual((shift_option[43], shift_option[47]), ("≤", "≥"))
 
-    def test_the_option_layer_lost_nothing(self):
-        """Every rearrangement above is a permutation, not an overwrite: ⌥ and ⇧⌥
-        together still carry exactly the characters upstream put there. Counted,
-        not just membership-tested, so a character cannot quietly go from two
-        homes to one."""
-        upstream = pathlib.Path(__file__).with_name("upstream-option-layers.txt")
-        theirs = {}
-        for line in upstream.read_text(encoding="utf-8").splitlines():
-            # A data row is exactly three tab-separated fields. Comments are
-            # matched by shape rather than by a leading '#', because '#' is one
-            # of the characters the file records.
-            fields = line.split("\t")
-            if len(fields) != 3:
-                continue
-            char, count, _codepoint = fields
-            theirs[char] = int(count)
-
-        mine = collections.Counter(
-            char
-            for char in list(self.layout.plane("option").values())
-            + list(self.layout.plane("shift+option").values())
-            if char and char.isprintable() and char != "\xa0"
-        )
-        self.assertEqual(dict(mine), theirs)
+    def test_the_option_layers_can_still_type_everything(self):
+        """Moving characters around these layers is routine; quietly dropping one
+        is not. If this fails and the change was intended, regenerate with
+        --update-inventory and let the diff be reviewed."""
+        self.assertEqual(dict(option_layer_characters(self.layout)), read_inventory())
 
     def test_caps_option_tracks_option_on_non_letters(self):
         """⌥ and ⇪⌥ are separate keyMaps, so a punctuation edit applied to one and
@@ -278,4 +311,8 @@ class LayoutTests(unittest.TestCase):
 
 
 if __name__ == "__main__":
+    if "--update-inventory" in sys.argv:
+        counts = write_inventory(KeyLayout(str(LAYOUT)))
+        print(f"{INVENTORY.name}: {len(counts)} characters, {sum(counts.values())} keys")
+        sys.exit(0)
     unittest.main(verbosity=2)

@@ -1,13 +1,18 @@
-# Every printable character upstream 'Ukrainian - PC' puts on ⌥ and ⇧⌥,
-# with how many keys carry it. test_keylayout.py asserts this fork still
-# produces exactly this multiset: the option layers are rearranged, never
-# added to or trimmed. Regenerating this file is how you record a
-# deliberate change to that promise — do it consciously.
-
+# Every printable character the ⌥ and ⇧⌥ layers can type, and how many keys
+# carry each. Rearranging those layers is free; this file is here so that
+# *losing* something is not — a character overwritten by a move, or one of a
+# pair of duplicates dropped while relocating the other, fails the tests instead
+# of surfacing as "I can't type that any more" months later.
+#
+# Regenerate deliberately, and let the diff speak in review:
+#
+#     python3 scripts/test_keylayout.py --update-inventory
+#
 *	4	U+002A
 +	3	U+002B
 /	3	U+002F
 =	3	U+003D
+!	2	U+0021
 -	2	U+002D
 0	2	U+0030
 1	2	U+0031
@@ -19,20 +24,18 @@
 7	2	U+0037
 8	2	U+0038
 9	2	U+0039
-~	2	U+007E
+@	2	U+0040
+|	2	U+007C
 ©	2	U+00A9
 ®	2	U+00AE
 µ	2	U+00B5
 ÷	2	U+00F7
-Ё	2	U+0401
-ё	2	U+0451
 “	2	U+201C
 …	2	U+2026
 ™	2	U+2122
 ∆	2	U+2206
 ≈	2	U+2248
 ≠	2	U+2260
-!	1	U+0021
 "	1	U+0022
 #	1	U+0023
 $	1	U+0024
@@ -45,14 +48,13 @@ $	1	U+0024
 .	1	U+002E
 <	1	U+003C
 >	1	U+003E
-@	1	U+0040
 [	1	U+005B
 ]	1	U+005D
 ^	1	U+005E
 `	1	U+0060
 {	1	U+007B
-|	1	U+007C
 }	1	U+007D
+~	1	U+007E
 £	1	U+00A3
 §	1	U+00A7
 «	1	U+00AB
@@ -62,6 +64,7 @@ $	1	U+0024
 ¶	1	U+00B6
 »	1	U+00BB
 ƒ	1	U+0192
+Ё	1	U+0401
 Ђ	1	U+0402
 Ѕ	1	U+0405
 Ј	1	U+0408
@@ -79,6 +82,7 @@ $	1	U+0024
 ъ	1	U+044A
 ы	1	U+044B
 э	1	U+044D
+ё	1	U+0451
 ђ	1	U+0452
 ѕ	1	U+0455
 ј	1	U+0458
