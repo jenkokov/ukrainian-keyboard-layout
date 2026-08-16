@@ -173,9 +173,46 @@ class LayoutTests(unittest.TestCase):
     def test_alternative_apostrophes_are_where_the_docs_say(self):
         """README and docs/layers.md send people to these three keys when they
         need an apostrophe that is not U+02BC. Pin them; prose drifts."""
-        self.assertEqual(self.layout.plane("shift+option")[25], "'")  # ⇧⌥9
+        self.assertEqual(self.layout.plane("shift+option")[24], "'")  # ⇧⌥=
         self.assertEqual(self.layout.plane("shift+option")[35], "’")  # ⇧⌥З
         self.assertEqual(self.layout.plane("option")[35], "‘")  # ⌥З
+
+    def test_brackets_and_quotes_are_on_the_number_row(self):
+        """Moved off the option layer's far corners onto 9 and 0, where they are
+        reachable one-handed. Pinned by codepoint: ‹«› is not ‹<›."""
+        option = self.layout.plane("option")
+        shift_option = self.layout.plane("shift+option")
+        self.assertEqual((option[25], option[29]), ("[", "]"))
+        self.assertEqual((shift_option[25], shift_option[29]), ("«", "»"))
+
+    def test_angle_brackets_are_easier_than_their_maths_lookalikes(self):
+        """ASCII < > on ⌥, the maths ≤ ≥ they displaced on ⇧⌥. Typing HTML or
+        code in Ukrainian is common; typing ≤ is not."""
+        option = self.layout.plane("option")
+        shift_option = self.layout.plane("shift+option")
+        self.assertEqual((option[43], option[47]), ("<", ">"))
+        self.assertEqual((shift_option[43], shift_option[47]), ("≤", "≥"))
+
+    def test_the_option_layer_lost_nothing(self):
+        """Every swap above is a swap, not an overwrite: each displaced character
+        is still somewhere on the option or shift+option layer."""
+        reachable = set(self.layout.plane("option").values())
+        reachable |= set(self.layout.plane("shift+option").values())
+        for char in "[]«»()'`<>≤≥":
+            self.assertIn(char, reachable, f"{char} fell off the layout")
+
+    def test_caps_option_tracks_option_on_non_letters(self):
+        """⌥ and ⇪⌥ are separate keyMaps, so a punctuation edit applied to one and
+        not the other makes caps lock silently change punctuation."""
+        option = self.layout.key_maps[self.layout.modifiers.resolve("option")]
+        caps_option = self.layout.key_maps[
+            self.layout.modifiers.resolve("caps", "option")
+        ]
+        for code, output in option.items():
+            if output and not output.isalpha():
+                self.assertEqual(
+                    caps_option.get(code), output, f"caps+option differs at {code}"
+                )
 
     def test_command_layer_is_us_ansi(self):
         """Why ⌘-shortcuts are unaffected by anything this fork does: the ⌘ layer

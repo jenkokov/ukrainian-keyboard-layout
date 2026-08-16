@@ -275,10 +275,11 @@ def quad_legend_block(x, y, theme, planes):
 
     The labels sit in the same arrangement as the legends they describe, so the
     key is readable without a colour lookup."""
-    # The `` ` `` key: ʼ ₴ ] [ — four genuinely distinct legends, so none of them
-    # is elided and the sample shows every position filled. Also the one key this
-    # fork changed, which makes it worth putting under the reader's nose.
-    sample = 50
+    # The `9` key: 9 ( [ « — four genuinely distinct legends, so none of them is
+    # elided and the sample shows every position filled. Reading it top to bottom
+    # also happens to teach the number row's brackets, which is where a reader is
+    # most likely to be looking something up.
+    sample = 25
     w = int(1.5 * QUAD_UNIT) - GAP
     h = QUAD_UNIT - GAP
 

@@ -16,7 +16,8 @@ from what the keyboard actually does. Don't edit them by hand — see
 </picture>
 
 The apostrophe on the `` ` `` key is **U+02BC ʼ**, and `/` sits unmodified on the
-`\|` key. Those are the only two keys that differ from upstream "Ukrainian - PC".
+`\|` key. Those are the only two keys on this layer that differ from upstream
+"Ukrainian - PC".
 
 ## Shift
 
@@ -35,10 +36,16 @@ here on the `\|` key.
   <img alt="Option layer" src="images/layout-option-light.svg">
 </picture>
 
-Inherited from upstream and untouched by this fork: non-Ukrainian Cyrillic
-(`ј џ ќ ё њ ѕ ў ъ ы ћ љ э ђ и`), typographic marks and maths. Worth knowing that
-`‘` U+2018 is on **⌥З**, `’` U+2019 on **⇧⌥З**, and ASCII `'` on **⇧⌥9**, if you
-need any of them alongside the U+02BC apostrophe.
+Mostly inherited from upstream: non-Ukrainian Cyrillic
+(`ј џ ќ ё њ ѕ ў ъ ы ћ љ э ђ и`), typographic marks and maths.
+
+This fork rearranges the punctuation on five of these keys. `[` `]` are on **⌥9**
+and **⌥0**, and `<` `>` on **⌥Б** and **⌥Ю** — the maths `≤` `≥` and the
+guillemets they displaced are one layer up, on shift+option. `(` `)` remain on
+**⌥`** and **⇧⌥`**, where the brackets used to be.
+
+Worth knowing that `‘` U+2018 is on **⌥З**, `’` U+2019 on **⇧⌥З**, and ASCII `'`
+on **⇧⌥=**, if you need any of them alongside the U+02BC apostrophe.
 
 ## Shift + Option
 
@@ -47,7 +54,9 @@ need any of them alongside the U+02BC apostrophe.
   <img alt="Shift plus Option layer" src="images/layout-shift-option-light.svg">
 </picture>
 
-Capitalised forms of the option layer, plus currency and the remaining punctuation.
+Capitalised forms of the option layer, plus currency and the remaining
+punctuation. `«` `»` are on **⇧⌥9** and **⇧⌥0**, directly above the brackets, and
+`≤` `≥` on **⇧⌥Б** and **⇧⌥Ю**.
 
 ## Layers not shown
 

@@ -3,7 +3,7 @@
 <rect x="24" y="24" width="55" height="55" rx="8" fill="#f7f8fa" stroke="#d5dae1" stroke-width="1"/>
 <text x="35" y="67" font-size="21" fill="#16191d" text-anchor="start">ʼ</text>
 <text x="35" y="44" font-size="14" fill="#6d7480" text-anchor="start">₴</text>
-<text x="69" y="67" font-size="13" fill="#98a0ad" text-anchor="end">]</text>
+<text x="69" y="67" font-size="13" fill="#98a0ad" text-anchor="end">(</text>
 <rect x="84" y="24" width="55" height="55" rx="8" fill="#f7f8fa" stroke="#d5dae1" stroke-width="1"/>
 <text x="95" y="67" font-size="21" fill="#16191d" text-anchor="start">1</text>
 <text x="95" y="44" font-size="14" fill="#6d7480" text-anchor="start">!</text>
@@ -39,11 +39,11 @@
 <rect x="564" y="24" width="55" height="55" rx="8" fill="#f7f8fa" stroke="#d5dae1" stroke-width="1"/>
 <text x="575" y="67" font-size="21" fill="#16191d" text-anchor="start">9</text>
 <text x="575" y="44" font-size="14" fill="#6d7480" text-anchor="start">(</text>
-<text x="609" y="67" font-size="13" fill="#98a0ad" text-anchor="end">(</text>
+<text x="609" y="67" font-size="13" fill="#98a0ad" text-anchor="end">[</text>
 <rect x="624" y="24" width="55" height="55" rx="8" fill="#f7f8fa" stroke="#d5dae1" stroke-width="1"/>
 <text x="635" y="67" font-size="21" fill="#16191d" text-anchor="start">0</text>
 <text x="635" y="44" font-size="14" fill="#6d7480" text-anchor="start">)</text>
-<text x="669" y="67" font-size="13" fill="#98a0ad" text-anchor="end">)</text>
+<text x="669" y="67" font-size="13" fill="#98a0ad" text-anchor="end">]</text>
 <rect x="684" y="24" width="55" height="55" rx="8" fill="#f7f8fa" stroke="#d5dae1" stroke-width="1"/>
 <text x="695" y="67" font-size="21" fill="#16191d" text-anchor="start">-</text>
 <text x="695" y="44" font-size="14" fill="#6d7480" text-anchor="start">_</text>
@@ -51,7 +51,7 @@
 <rect x="744" y="24" width="55" height="55" rx="8" fill="#f7f8fa" stroke="#d5dae1" stroke-width="1"/>
 <text x="755" y="67" font-size="21" fill="#16191d" text-anchor="start">=</text>
 <text x="755" y="44" font-size="14" fill="#6d7480" text-anchor="start">+</text>
-<text x="789" y="67" font-size="13" fill="#98a0ad" text-anchor="end">»</text>
+<text x="789" y="67" font-size="13" fill="#98a0ad" text-anchor="end">`</text>
 <rect x="804" y="24" width="115" height="55" rx="8" fill="#eceef2" stroke="#d5dae1" stroke-width="1"/>
 <text x="861.5" y="57.5" font-size="16" fill="#98a0ad" text-anchor="middle">⌫</text>
 <rect x="24" y="84" width="85" height="55" rx="8" fill="#eceef2" stroke="#d5dae1" stroke-width="1"/>
@@ -158,10 +158,10 @@
 <text x="564" y="247" font-size="13" fill="#98a0ad" text-anchor="end">~</text>
 <rect x="579" y="204" width="55" height="55" rx="8" fill="#f7f8fa" stroke="#d5dae1" stroke-width="1"/>
 <text x="590" y="247" font-size="21" fill="#16191d" text-anchor="start">б</text>
-<text x="624" y="247" font-size="13" fill="#98a0ad" text-anchor="end">≤</text>
+<text x="624" y="247" font-size="13" fill="#98a0ad" text-anchor="end">&lt;</text>
 <rect x="639" y="204" width="55" height="55" rx="8" fill="#f7f8fa" stroke="#d5dae1" stroke-width="1"/>
 <text x="650" y="247" font-size="21" fill="#16191d" text-anchor="start">ю</text>
-<text x="684" y="247" font-size="13" fill="#98a0ad" text-anchor="end">≥</text>
+<text x="684" y="247" font-size="13" fill="#98a0ad" text-anchor="end">&gt;</text>
 <rect x="699" y="204" width="55" height="55" rx="8" fill="#f7f8fa" stroke="#d5dae1" stroke-width="1"/>
 <text x="710" y="247" font-size="21" fill="#16191d" text-anchor="start">.</text>
 <text x="710" y="224" font-size="14" fill="#6d7480" text-anchor="start">,</text>

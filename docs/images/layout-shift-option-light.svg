@@ -2,7 +2,7 @@
 <rect width="943" height="377" fill="#ffffff"/>
 <text x="24" y="40" font-size="15" fill="#454c57" text-anchor="start" font-weight="600"><tspan fill="#1a4c9e">⇧⌥</tspan>  Shift + Option</text>
 <rect x="24" y="58" width="55" height="55" rx="8" fill="#f7f8fa" stroke="#d5dae1" stroke-width="1"/>
-<text x="51.5" y="93.5" font-size="22" fill="#16191d" text-anchor="middle">[</text>
+<text x="51.5" y="93.5" font-size="22" fill="#16191d" text-anchor="middle">)</text>
 <rect x="84" y="58" width="55" height="55" rx="8" fill="#f7f8fa" stroke="#d5dae1" stroke-width="1"/>
 <text x="111.5" y="93.5" font-size="22" fill="#16191d" text-anchor="middle">|</text>
 <rect x="144" y="58" width="55" height="55" rx="8" fill="#f7f8fa" stroke="#d5dae1" stroke-width="1"/>
@@ -20,13 +20,13 @@
 <rect x="504" y="58" width="55" height="55" rx="8" fill="#f7f8fa" stroke="#d5dae1" stroke-width="1"/>
 <text x="531.5" y="93.5" font-size="22" fill="#16191d" text-anchor="middle">√</text>
 <rect x="564" y="58" width="55" height="55" rx="8" fill="#f7f8fa" stroke="#d5dae1" stroke-width="1"/>
-<text x="591.5" y="93.5" font-size="22" fill="#16191d" text-anchor="middle">'</text>
+<text x="591.5" y="93.5" font-size="22" fill="#16191d" text-anchor="middle">«</text>
 <rect x="624" y="58" width="55" height="55" rx="8" fill="#f7f8fa" stroke="#d5dae1" stroke-width="1"/>
-<text x="651.5" y="93.5" font-size="22" fill="#16191d" text-anchor="middle">`</text>
+<text x="651.5" y="93.5" font-size="22" fill="#16191d" text-anchor="middle">»</text>
 <rect x="684" y="58" width="55" height="55" rx="8" fill="#f7f8fa" stroke="#d5dae1" stroke-width="1"/>
 <text x="711.5" y="93.5" font-size="22" fill="#16191d" text-anchor="middle">—</text>
 <rect x="744" y="58" width="55" height="55" rx="8" fill="#f7f8fa" stroke="#d5dae1" stroke-width="1"/>
-<text x="771.5" y="93.5" font-size="22" fill="#16191d" text-anchor="middle">«</text>
+<text x="771.5" y="93.5" font-size="22" fill="#16191d" text-anchor="middle">'</text>
 <rect x="804" y="58" width="115" height="55" rx="8" fill="#eceef2" stroke="#d5dae1" stroke-width="1"/>
 <text x="861.5" y="91.5" font-size="16" fill="#98a0ad" text-anchor="middle">⌫</text>
 <rect x="24" y="118" width="85" height="55" rx="8" fill="#eceef2" stroke="#d5dae1" stroke-width="1"/>
@@ -100,9 +100,9 @@
 <rect x="519" y="238" width="55" height="55" rx="8" fill="#f7f8fa" stroke="#d5dae1" stroke-width="1"/>
 <text x="546.5" y="273.5" font-size="22" fill="#16191d" text-anchor="middle">~</text>
 <rect x="579" y="238" width="55" height="55" rx="8" fill="#f7f8fa" stroke="#d5dae1" stroke-width="1"/>
-<text x="606.5" y="273.5" font-size="22" fill="#16191d" text-anchor="middle">&lt;</text>
+<text x="606.5" y="273.5" font-size="22" fill="#16191d" text-anchor="middle">≤</text>
 <rect x="639" y="238" width="55" height="55" rx="8" fill="#f7f8fa" stroke="#d5dae1" stroke-width="1"/>
-<text x="666.5" y="273.5" font-size="22" fill="#16191d" text-anchor="middle">&gt;</text>
+<text x="666.5" y="273.5" font-size="22" fill="#16191d" text-anchor="middle">≥</text>
 <rect x="699" y="238" width="55" height="55" rx="8" fill="#f7f8fa" stroke="#d5dae1" stroke-width="1"/>
 <text x="726.5" y="273.5" font-size="22" fill="#16191d" text-anchor="middle">„</text>
 <rect x="759" y="238" width="160" height="55" rx="8" fill="#dce8fb" stroke="#8fb2e8" stroke-width="1"/>

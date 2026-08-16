@@ -6,8 +6,8 @@ unticked below is deferred work, roughly in the order it makes sense to do.
 
 ## Phase 2 — the layout changes
 
-The point of the fork. `src/Ukrainian - Mac PC.keylayout` is currently
-byte-identical to upstream except the `<keyboard>` identity line.
+The point of the fork. `src/Ukrainian - Mac PC.keylayout` now differs from
+upstream in 23 cells across seven physical keys; see `CHANGELOG.md`.
 
 - [x] Apply the mapping changes
 - [ ] Test each change locally (`./scripts/install-local.sh`, log out, log back in)
@@ -15,10 +15,8 @@ byte-identical to upstream except the `<keyboard>` identity line.
       "why" is the part nobody can reconstruct from a diff of key codes
 - [ ] Tag `v1.0.0` once the mappings settle
 
-Worth deciding early: does this layout stay a strict superset of upstream
-"Ukrainian - PC" (safe to switch to, nothing moves), or does it move existing keys?
-That answer belongs at the top of the README, because it is the first thing anyone
-evaluating the layout needs to know.
+Decided: not a strict superset — it moves existing keys. Nothing is *removed*
+though, and the README says so where anyone evaluating the layout will see it.
 
 ## Phase 3 — images
 

@@ -3,8 +3,8 @@
 <rect x="24" y="24" width="73" height="73" rx="8" fill="#1b2028" stroke="#333b45" stroke-width="1"/>
 <text x="37" y="83" font-size="23" fill="#e8eef5" text-anchor="start">ʼ</text>
 <text x="37" y="48" font-size="16" fill="#9aa4b2" text-anchor="start">₴</text>
-<text x="85" y="83" font-size="16" fill="#c3a0dd" text-anchor="end">]</text>
-<text x="85" y="48" font-size="14" fill="#8f74a6" text-anchor="end">[</text>
+<text x="85" y="83" font-size="16" fill="#c3a0dd" text-anchor="end">(</text>
+<text x="85" y="48" font-size="14" fill="#8f74a6" text-anchor="end">)</text>
 <rect x="102" y="24" width="73" height="73" rx="8" fill="#1b2028" stroke="#333b45" stroke-width="1"/>
 <text x="115" y="83" font-size="23" fill="#e8eef5" text-anchor="start">1</text>
 <text x="115" y="48" font-size="16" fill="#9aa4b2" text-anchor="start">!</text>
@@ -48,13 +48,13 @@
 <rect x="726" y="24" width="73" height="73" rx="8" fill="#1b2028" stroke="#333b45" stroke-width="1"/>
 <text x="739" y="83" font-size="23" fill="#e8eef5" text-anchor="start">9</text>
 <text x="739" y="48" font-size="16" fill="#9aa4b2" text-anchor="start">(</text>
-<text x="787" y="83" font-size="16" fill="#c3a0dd" text-anchor="end">(</text>
-<text x="787" y="48" font-size="14" fill="#8f74a6" text-anchor="end">'</text>
+<text x="787" y="83" font-size="16" fill="#c3a0dd" text-anchor="end">[</text>
+<text x="787" y="48" font-size="14" fill="#8f74a6" text-anchor="end">«</text>
 <rect x="804" y="24" width="73" height="73" rx="8" fill="#1b2028" stroke="#333b45" stroke-width="1"/>
 <text x="817" y="83" font-size="23" fill="#e8eef5" text-anchor="start">0</text>
 <text x="817" y="48" font-size="16" fill="#9aa4b2" text-anchor="start">)</text>
-<text x="865" y="83" font-size="16" fill="#c3a0dd" text-anchor="end">)</text>
-<text x="865" y="48" font-size="14" fill="#8f74a6" text-anchor="end">`</text>
+<text x="865" y="83" font-size="16" fill="#c3a0dd" text-anchor="end">]</text>
+<text x="865" y="48" font-size="14" fill="#8f74a6" text-anchor="end">»</text>
 <rect x="882" y="24" width="73" height="73" rx="8" fill="#1b2028" stroke="#333b45" stroke-width="1"/>
 <text x="895" y="83" font-size="23" fill="#e8eef5" text-anchor="start">-</text>
 <text x="895" y="48" font-size="16" fill="#9aa4b2" text-anchor="start">_</text>
@@ -63,8 +63,8 @@
 <rect x="960" y="24" width="73" height="73" rx="8" fill="#1b2028" stroke="#333b45" stroke-width="1"/>
 <text x="973" y="83" font-size="23" fill="#e8eef5" text-anchor="start">=</text>
 <text x="973" y="48" font-size="16" fill="#9aa4b2" text-anchor="start">+</text>
-<text x="1021" y="83" font-size="16" fill="#c3a0dd" text-anchor="end">»</text>
-<text x="1021" y="48" font-size="14" fill="#8f74a6" text-anchor="end">«</text>
+<text x="1021" y="83" font-size="16" fill="#c3a0dd" text-anchor="end">`</text>
+<text x="1021" y="48" font-size="14" fill="#8f74a6" text-anchor="end">'</text>
 <rect x="1038" y="24" width="151" height="73" rx="8" fill="#141920" stroke="#2b323b" stroke-width="1"/>
 <text x="1113.5" y="66.5" font-size="17" fill="#6d7784" text-anchor="middle">⌫</text>
 <rect x="24" y="102" width="112" height="73" rx="8" fill="#141920" stroke="#2b323b" stroke-width="1"/>
@@ -176,12 +176,12 @@
 <text x="728.5" y="317" font-size="16" fill="#c3a0dd" text-anchor="end">~</text>
 <rect x="745.5" y="258" width="73" height="73" rx="8" fill="#1b2028" stroke="#333b45" stroke-width="1"/>
 <text x="758.5" y="317" font-size="23" fill="#e8eef5" text-anchor="start">б</text>
-<text x="806.5" y="317" font-size="16" fill="#c3a0dd" text-anchor="end">≤</text>
-<text x="806.5" y="282" font-size="14" fill="#8f74a6" text-anchor="end">&lt;</text>
+<text x="806.5" y="317" font-size="16" fill="#c3a0dd" text-anchor="end">&lt;</text>
+<text x="806.5" y="282" font-size="14" fill="#8f74a6" text-anchor="end">≤</text>
 <rect x="823.5" y="258" width="73" height="73" rx="8" fill="#1b2028" stroke="#333b45" stroke-width="1"/>
 <text x="836.5" y="317" font-size="23" fill="#e8eef5" text-anchor="start">ю</text>
-<text x="884.5" y="317" font-size="16" fill="#c3a0dd" text-anchor="end">≥</text>
-<text x="884.5" y="282" font-size="14" fill="#8f74a6" text-anchor="end">&gt;</text>
+<text x="884.5" y="317" font-size="16" fill="#c3a0dd" text-anchor="end">&gt;</text>
+<text x="884.5" y="282" font-size="14" fill="#8f74a6" text-anchor="end">≥</text>
 <rect x="901.5" y="258" width="73" height="73" rx="8" fill="#1b2028" stroke="#333b45" stroke-width="1"/>
 <text x="914.5" y="317" font-size="23" fill="#e8eef5" text-anchor="start">.</text>
 <text x="914.5" y="282" font-size="16" fill="#9aa4b2" text-anchor="start">,</text>
@@ -203,10 +203,10 @@
 <rect x="1096.5" y="336" width="92.5" height="73" rx="8" fill="#141920" stroke="#2b323b" stroke-width="1"/>
 <text x="1142.75" y="378.5" font-size="17" fill="#6d7784" text-anchor="middle">⌃</text>
 <rect x="24" y="426" width="112" height="73" rx="8" fill="#1b2028" stroke="#333b45" stroke-width="1"/>
-<text x="37" y="485" font-size="23" fill="#e8eef5" text-anchor="start">ʼ</text>
-<text x="37" y="450" font-size="16" fill="#9aa4b2" text-anchor="start">₴</text>
-<text x="124" y="485" font-size="16" fill="#c3a0dd" text-anchor="end">]</text>
-<text x="124" y="450" font-size="14" fill="#8f74a6" text-anchor="end">[</text>
+<text x="37" y="485" font-size="23" fill="#e8eef5" text-anchor="start">9</text>
+<text x="37" y="450" font-size="16" fill="#9aa4b2" text-anchor="start">(</text>
+<text x="124" y="485" font-size="16" fill="#c3a0dd" text-anchor="end">[</text>
+<text x="124" y="450" font-size="14" fill="#8f74a6" text-anchor="end">«</text>
 <text x="162" y="450" font-size="14" fill="#9aa4b2" text-anchor="start" font-weight="600">⇧ shift</text>
 <text x="162" y="476" font-size="14" fill="#e8eef5" text-anchor="start" font-weight="600">base</text>
 <text x="352" y="450" font-size="14" fill="#8f74a6" text-anchor="start" font-weight="600">⇧⌥ shift + option</text>

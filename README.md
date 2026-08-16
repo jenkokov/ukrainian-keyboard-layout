@@ -1,8 +1,9 @@
 # Ukrainian - Mac PC
 
 A Ukrainian keyboard layout for macOS. It is the familiar community
-"Ukrainian - PC" layout with two keys fixed: a real Ukrainian apostrophe, and
-slash where you can actually reach it.
+"Ukrainian - PC" layout with the everyday friction taken out: a real Ukrainian
+apostrophe, slash where you can actually reach it, and brackets and quotes moved
+somewhere your fingers already are.
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="docs/images/layout-quad-dark.svg">
@@ -15,7 +16,7 @@ are unaffected.
 
 **[Download the latest release →](https://github.com/jenkokov/ukrainian-keyboard-layout/releases)**
 
-## The two changes
+## What's different
 
 ### `ʼ` — a real apostrophe
 
@@ -27,7 +28,7 @@ what you want in Ukrainian: it keeps `пʼять` a single word, so double-click
 selects the whole thing and a line break never lands inside it.
 
 The one catch worth knowing: text typed with `ʼ` will not match text typed with
-`'` or `’` in a naive search. If you need the others, ASCII `'` is on **⇧⌥9** and
+`'` or `’` in a naive search. If you need the others, ASCII `'` is on **⇧⌥=** and
 `’` on **⇧⌥З**.
 
 ### `/` without shift
@@ -36,15 +37,33 @@ On the `\|` key, `/` and `\` swap places: **`/` is now unmodified**, `\` is on
 shift. Slash is far more common than backslash in ordinary Ukrainian typing.
 Nothing is lost — both characters stay on the same key.
 
+### Brackets and quotes on the number row
+
+**`[` `]` are on ⌥9 and ⌥0**, and **`«` `»` on ⇧⌥9 and ⇧⌥0** — directly under
+`(` and `)`, so all three pairs live on the same two fingers.
+
+Upstream parks them in the far corners of the keyboard, on the `` ` `` and `=`
+keys, while ⌥9 and ⌥0 sit there holding a second copy of `(` and `)` that shift
+already gives you. This trades that duplication for the two pairs you actually
+reach for. The displaced `(` `)` are still there, on ⌥` and ⇧⌥`.
+
+### `<` `>` without the extra reach
+
+On the `б` and `ю` keys, ASCII **`<` and `>` are on plain ⌥**; the maths `≤` `≥`
+they displaced moved to ⇧⌥. Writing markup or code without leaving the Ukrainian
+layout is ordinary. Typing `≤` is not.
+
 ### Everything else is unchanged
 
-Exactly five cells differ from upstream across the whole layout, all on those two
-keys. The option, shift+option, ⌘ and ⌃ layers are identical. The ⌘ layer is the US
-ANSI layout key for key, so every shortcut still lands on the same physical key —
-`⌘C` reaches `C`, not `С`.
+Nothing was removed. The ⌥ and ⇧⌥ layers between them carry exactly the same set
+of characters as upstream — every change above is a rearrangement, and the tests
+assert that no character fell off the layout.
+
+The ⌘ and ⌃ layers are untouched. The ⌘ layer is the US ANSI layout key for key,
+so every shortcut still lands on the same physical key — `⌘C` reaches `C`, not `С`.
 
 That does mean this is **not** a strict superset: muscle memory from
-"Ukrainian - PC" transfers everywhere except those two keys.
+"Ukrainian - PC" transfers everywhere except the seven keys above.
 
 ## Install
 
