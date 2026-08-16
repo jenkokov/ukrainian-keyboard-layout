@@ -1,34 +1,12 @@
 # Layers
 
-One diagram per modifier layer, generated from
-`src/Ukrainian - Mac PC.keylayout` by `scripts/render.py`. The keys you hold to
-reach a layer are highlighted on each diagram.
+One diagram per modifier layer, with the keys you hold to reach it highlighted.
+All four layers on a single keyboard are in the [README](../README.md); these are
+for looking up one character at a time.
 
-Do not edit these by hand — regenerate:
-
-```sh
-python3 scripts/render.py src/*.keylayout docs/images
-```
-
-## All four at once
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="images/layout-quad-dark.svg">
-  <img alt="All four layers on one keycap" src="images/layout-quad-light.svg">
-</picture>
-
-Each keycap is a 2×2 grid whose axes mean something: the left column is
-unmodified and the right column is ⌥ (tinted, so the option layer reads as a
-column); the bottom row is unshifted and the top row is ⇧. Reading bottom-left →
-top-right walks base → ⇧⌥.
-
-A shifted legend is dropped where it repeats or merely capitalises the one below
-it. On a Cyrillic layout that is most of the keyboard — every letter key, and much
-of the option layer where shift is a no-op — so what remains on the top row is
-exactly the set of keys where shift does something you would not have guessed.
-
-The single-layer diagrams below are easier to read if you are looking up one
-character; this one is the reference.
+Every diagram here is generated from the layout file itself, so it cannot drift
+from what the keyboard actually does. Don't edit them by hand — see
+[development.md](development.md).
 
 ## Base
 
