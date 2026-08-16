@@ -68,11 +68,28 @@ That does mean this is **not** a strict superset: muscle memory from
 ## Install
 
 Download `Ukrainian-Mac-PC-<version>.zip` from
-[Releases](https://github.com/jenkokov/ukrainian-keyboard-layout/releases), then:
+[Releases](https://github.com/jenkokov/ukrainian-keyboard-layout/releases).
+
+### In Finder
+
+1. Double-click the zip. You get **Ukrainian - Mac PC.bundle**.
+2. In Finder, press **⇧⌘G** and go to `~/Library/Keyboard Layouts`.
+   If that folder doesn't exist, create it — the name has to be exact.
+3. Drag the bundle in.
+
+There is no double-click installer for keyboard layouts; copying the bundle into
+that folder *is* the installation.
+
+### In Terminal
 
 ```sh
-unzip Ukrainian-Mac-PC-*.zip -d ~/Library/"Keyboard Layouts"
+ditto -x -k Ukrainian-Mac-PC-*.zip ~/Library/"Keyboard Layouts"
 ```
+
+(`ditto` rather than `unzip`: it overwrites an existing copy without prompting,
+and it doesn't leave a `__MACOSX` folder behind.)
+
+### Either way
 
 **Log out and back in.** macOS only reads keyboard layouts at login, so this step
 is not optional.
@@ -81,6 +98,9 @@ Then add it under **System Settings › Keyboard › Input Sources › Edit › 
 Ukrainian**, and pick **Ukrainian - Mac PC**.
 
 ## Uninstall
+
+Drag **Ukrainian - Mac PC.bundle** out of `~/Library/Keyboard Layouts` (⇧⌘G in
+Finder to get there), or:
 
 ```sh
 rm -rf ~/Library/"Keyboard Layouts"/"Ukrainian - Mac PC.bundle"
