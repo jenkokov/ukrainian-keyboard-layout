@@ -37,15 +37,26 @@ On the `\|` key, `/` and `\` swap places: **`/` is now unmodified**, `\` is on
 shift. Slash is far more common than backslash in ordinary Ukrainian typing.
 Nothing is lost — both characters stay on the same key.
 
-### Brackets and quotes on the number row
+### Brackets where English keeps them
 
-**`[` `]` are on ⌥9 and ⌥0**, and **`«` `»` on ⇧⌥9 and ⇧⌥0** — directly under
-`(` and `)`, so all three pairs live on the same two fingers.
+**`[` `]` are on ⌥х and ⌥ї, and `{` `}` on ⇧⌥х and ⇧⌥ї.**
 
-Upstream parks them in the far corners of the keyboard, on the `` ` `` and `=`
-keys, while ⌥9 and ⌥0 sit there holding a second copy of `(` and `)` that shift
-already gives you. This trades that duplication for the two pairs you actually
-reach for. The displaced `(` `)` are still there, on ⌥` and ⇧⌥`.
+Those are the same two physical keys that carry the brackets on a US keyboard —
+Cyrillic just put х and ї on top of them. So the bracket you reach for in English
+is the bracket you reach for here, with ⌥ held. One position to remember instead
+of two.
+
+Upstream scatters them: `[` and `]` on one far-corner key, `{` and `}` on another
+in the middle of the home row, each pair with the closing bracket on ⌥ and the
+opening one on ⇧⌥ — backwards from every other keyboard.
+
+### Quotes on 9 and 0
+
+**⌥9 ⌥0 give `“` `”`; ⇧⌥9 ⇧⌥0 give `«` `»`.**
+
+Both quote pairs on the same two keys, opening on 9 and closing on 0, the
+Ukrainian pair a shift away from the English one. The low `„` used for nested
+quoting stays where upstream had it, on the `.` key: `“` on ⌥, `„` on ⇧⌥.
 
 ### `<` `>` without the extra reach
 
@@ -63,7 +74,7 @@ The ⌘ and ⌃ layers are untouched. The ⌘ layer is the US ANSI layout key fo
 so every shortcut still lands on the same physical key — `⌘C` reaches `C`, not `С`.
 
 That does mean this is **not** a strict superset: muscle memory from
-"Ukrainian - PC" transfers everywhere except the seven keys above.
+"Ukrainian - PC" transfers everywhere except the ten keys above.
 
 ## Install
 

@@ -6,6 +6,7 @@
 Plain unittest, no dependencies, so CI needs nothing but a Python.
 """
 
+import collections
 import itertools
 import pathlib
 import unittest
@@ -177,12 +178,24 @@ class LayoutTests(unittest.TestCase):
         self.assertEqual(self.layout.plane("shift+option")[35], "’")  # ⇧⌥З
         self.assertEqual(self.layout.plane("option")[35], "‘")  # ⌥З
 
-    def test_brackets_and_quotes_are_on_the_number_row(self):
-        """Moved off the option layer's far corners onto 9 and 0, where they are
-        reachable one-handed. Pinned by codepoint: ‹«› is not ‹<›."""
+    def test_brackets_sit_on_the_us_bracket_keys(self):
+        """⌥ reproduces the US layout on the two keys Cyrillic took the brackets
+        from, so there is one bracket position to remember rather than two. The
+        US_ANSI assertions are the point of the test: they prove 33 and 30 really
+        are those keys, rather than trusting a comment."""
+        self.assertEqual((US_ANSI[33], US_ANSI[30]), ("[", "]"))
         option = self.layout.plane("option")
         shift_option = self.layout.plane("shift+option")
-        self.assertEqual((option[25], option[29]), ("[", "]"))
+        self.assertEqual((option[33], option[30]), ("[", "]"))
+        self.assertEqual((shift_option[33], shift_option[30]), ("{", "}"))
+
+    def test_quote_pairs_share_the_number_row(self):
+        """9 and 0 are the quote keys: ⌥ gives the English pair, ⇧⌥ the Ukrainian
+        one, opening on 9 and closing on 0 in both. Pinned by codepoint, because
+        “ ” « „ are four characters that look alike in a diff."""
+        option = self.layout.plane("option")
+        shift_option = self.layout.plane("shift+option")
+        self.assertEqual((option[25], option[29]), ("“", "”"))
         self.assertEqual((shift_option[25], shift_option[29]), ("«", "»"))
 
     def test_angle_brackets_are_easier_than_their_maths_lookalikes(self):
@@ -194,12 +207,29 @@ class LayoutTests(unittest.TestCase):
         self.assertEqual((shift_option[43], shift_option[47]), ("≤", "≥"))
 
     def test_the_option_layer_lost_nothing(self):
-        """Every swap above is a swap, not an overwrite: each displaced character
-        is still somewhere on the option or shift+option layer."""
-        reachable = set(self.layout.plane("option").values())
-        reachable |= set(self.layout.plane("shift+option").values())
-        for char in "[]«»()'`<>≤≥":
-            self.assertIn(char, reachable, f"{char} fell off the layout")
+        """Every rearrangement above is a permutation, not an overwrite: ⌥ and ⇧⌥
+        together still carry exactly the characters upstream put there. Counted,
+        not just membership-tested, so a character cannot quietly go from two
+        homes to one."""
+        upstream = pathlib.Path(__file__).with_name("upstream-option-layers.txt")
+        theirs = {}
+        for line in upstream.read_text(encoding="utf-8").splitlines():
+            # A data row is exactly three tab-separated fields. Comments are
+            # matched by shape rather than by a leading '#', because '#' is one
+            # of the characters the file records.
+            fields = line.split("\t")
+            if len(fields) != 3:
+                continue
+            char, count, _codepoint = fields
+            theirs[char] = int(count)
+
+        mine = collections.Counter(
+            char
+            for char in list(self.layout.plane("option").values())
+            + list(self.layout.plane("shift+option").values())
+            if char and char.isprintable() and char != "\xa0"
+        )
+        self.assertEqual(dict(mine), theirs)
 
     def test_caps_option_tracks_option_on_non_letters(self):
         """⌥ and ⇪⌥ are separate keyMaps, so a punctuation edit applied to one and

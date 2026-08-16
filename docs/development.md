@@ -25,6 +25,7 @@ scripts/keylayout.py                 parser: modifier resolution + key geometry
 scripts/validate.py                  structural checks on the keylayout
 scripts/render.py                    generates docs/images/*.svg from the keylayout
 scripts/test_keylayout.py            unit tests for the resolver and geometry
+scripts/upstream-option-layers.txt   the ⌥/⇧⌥ character multiset, as upstream had it
 scripts/build.sh                     assembles dist/*.bundle and the release zip
 docs/layers.md                       one diagram per modifier layer
 docs/development.md                  this file
@@ -124,7 +125,13 @@ selected `mapIndex` is present, and that referenced actions are defined.
 - the two mappings this fork exists for, asserted by codepoint so a lookalike
   character cannot pass
 - that the ⌘ layer is US ANSI key for key, which is why shortcuts are unaffected
-- that caps lock changes letter case only
+- that caps lock changes letter case only, and that ⇪⌥ tracks ⌥ on every
+  non-letter — they are separate keyMaps (3 and 9), so editing one and not the
+  other makes caps lock silently change your punctuation
+- that ⌥ and ⇧⌥ still carry exactly upstream's characters, counted, against
+  `upstream-option-layers.txt`. Rearranging those layers is fine; losing a
+  character off the end of the keyboard is not. Regenerate that file only when
+  you mean to change what the layout can type
 - that C0 control characters survive the parse
 
 It does not check semantics beyond that: nothing here can tell you a key produces

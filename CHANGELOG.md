@@ -4,19 +4,27 @@
 
 ### Changed
 
-The ⌥ and ⇧⌥ planes are rearranged. This is a pure rearrangement: taken together,
-the two planes carry exactly the same set of characters as before, just in
-different places. `scripts/test_keylayout.py` asserts that nothing fell off.
+The ⌥ and ⇧⌥ planes are rearranged, with ⌥ following the US layout wherever
+Cyrillic displaced a punctuation key. This is a pure rearrangement: taken
+together, the two planes carry exactly the same characters as upstream, with the
+same number of keys for each. `scripts/upstream-option-layers.txt` records that
+multiset and `scripts/test_keylayout.py` asserts it every build.
 
-- **`[` and `]` moved to ⌥9 and ⌥0**, and **`«` `»` to ⇧⌥9 and ⇧⌥0.** The brackets
-  were on one key in the far corner (⌥` and ⇧⌥`), and the guillemets on another
-  (⌥= and ⇧⌥=). Both are common enough in Ukrainian typing to deserve the number
-  row, where they sit under the same fingers as `(` and `)` one row up.
+- **`[` `]` moved to ⌥Х and ⌥Ї, and `{` `}` to ⇧⌥Х and ⇧⌥Ї** — keycodes 33 and 30,
+  which are the physical keys a US keyboard puts the brackets on. Holding ⌥ now
+  reaches the same bracket key you already use in English, in the same order.
 
-  What they displaced moved to where they came from: ⌥9 and ⌥0 were duplicates of
-  shift's `(` and `)`, and are now on ⌥` and ⇧⌥` — still reachable, no longer
-  occupying the best real estate on the layout for characters shift already
-  provides.
+  Upstream scatters them: `[` `]` on keycode 50 and `{` `}` on keycode 4, both
+  pairs with the *closing* bracket on ⌥ and the opening one on ⇧⌥.
+
+- **`“` `”` moved to ⌥9 and ⌥0, under `«` `»` on ⇧⌥9 and ⇧⌥0.** Both quote pairs
+  on one pair of keys, opening on 9 and closing on 0 in both layers. `“` was
+  previously on two keys at once; the `“` `„` pair on the `.` key is untouched.
+
+- **`ъ` `Ъ` moved to ⌥Р and ⇧⌥Р**, the slots the braces vacated.
+
+- **`(` `)` are on ⌥` and ⇧⌥`**, where they went when the brackets left the
+  number row. On ⌥9 and ⌥0 they had been duplicating what shift already gives.
 
   **ASCII `'` (U+0027) is now on ⇧⌥=, not ⇧⌥9.** `` ` `` moved with it, to ⌥=.
 

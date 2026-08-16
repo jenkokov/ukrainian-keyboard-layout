@@ -39,10 +39,10 @@ here on the `\|` key.
 Mostly inherited from upstream: non-Ukrainian Cyrillic
 (`ј џ ќ ё њ ѕ ў ъ ы ћ љ э ђ и`), typographic marks and maths.
 
-This fork rearranges the punctuation on five of these keys. `[` `]` are on **⌥9**
-and **⌥0**, and `<` `>` on **⌥Б** and **⌥Ю** — the maths `≤` `≥` and the
-guillemets they displaced are one layer up, on shift+option. `(` `)` remain on
-**⌥`** and **⇧⌥`**, where the brackets used to be.
+This fork rearranges the punctuation. `[` and `]` are on **⌥Х** and **⌥Ї** — the
+two keys that carry the brackets on a US keyboard — and `<` `>` on **⌥Б** and
+**⌥Ю**. The English quotes `“` `”` are on **⌥9** and **⌥0**. `(` `)` sit on
+**⌥`** and **⇧⌥`**, and the Cyrillic hard sign `ъ` moved to **⌥Р**.
 
 Worth knowing that `‘` U+2018 is on **⌥З**, `’` U+2019 on **⇧⌥З**, and ASCII `'`
 on **⇧⌥=**, if you need any of them alongside the U+02BC apostrophe.
@@ -55,8 +55,9 @@ on **⇧⌥=**, if you need any of them alongside the U+02BC apostrophe.
 </picture>
 
 Capitalised forms of the option layer, plus currency and the remaining
-punctuation. `«` `»` are on **⇧⌥9** and **⇧⌥0**, directly above the brackets, and
-`≤` `≥` on **⇧⌥Б** and **⇧⌥Ю**.
+punctuation. `{` `}` are on **⇧⌥Х** and **⇧⌥Ї**, directly above the brackets;
+`«` `»` on **⇧⌥9** and **⇧⌥0**, above the English quotes; and `≤` `≥` on **⇧⌥Б**
+and **⇧⌥Ю**.
 
 ## Layers not shown
 
