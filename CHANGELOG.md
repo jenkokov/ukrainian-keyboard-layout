@@ -1,6 +1,6 @@
 # Changelog
 
-## Unreleased
+## 0.2.0 — 2026-08-16
 
 ### Changed
 
@@ -24,3 +24,9 @@
 
 Both changes are applied to the caps-lock plane as well, so caps lock does not
 change which character these keys produce.
+
+## 0.1.0 — 2026-08-16
+
+Baseline fork of the Ukelele-produced "Ukrainian - PC" layout as
+"Ukrainian - Mac PC": new display name, own bundle ID and keyboard id so both
+can be installed side by side. Key mappings are byte-identical to upstream.
