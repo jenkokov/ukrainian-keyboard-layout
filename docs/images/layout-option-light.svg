@@ -26,7 +26,7 @@
 <rect x="684" y="58" width="55" height="55" rx="8" fill="#f7f8fa" stroke="#d5dae1" stroke-width="1"/>
 <text x="711.5" y="93.5" font-size="22" fill="#16191d" text-anchor="middle">–</text>
 <rect x="744" y="58" width="55" height="55" rx="8" fill="#f7f8fa" stroke="#d5dae1" stroke-width="1"/>
-<text x="771.5" y="93.5" font-size="22" fill="#16191d" text-anchor="middle">э</text>
+<text x="771.5" y="93.5" font-size="22" fill="#16191d" text-anchor="middle">'</text>
 <rect x="804" y="58" width="115" height="55" rx="8" fill="#eceef2" stroke="#d5dae1" stroke-width="1"/>
 <text x="861.5" y="91.5" font-size="16" fill="#98a0ad" text-anchor="middle">⌫</text>
 <rect x="24" y="118" width="85" height="55" rx="8" fill="#eceef2" stroke="#d5dae1" stroke-width="1"/>
@@ -80,7 +80,7 @@
 <rect x="669" y="178" width="55" height="55" rx="8" fill="#f7f8fa" stroke="#d5dae1" stroke-width="1"/>
 <text x="696.5" y="213.5" font-size="22" fill="#16191d" text-anchor="middle">…</text>
 <rect x="729" y="178" width="55" height="55" rx="8" fill="#f7f8fa" stroke="#d5dae1" stroke-width="1"/>
-<text x="756.5" y="213.5" font-size="22" fill="#16191d" text-anchor="middle">'</text>
+<text x="756.5" y="213.5" font-size="22" fill="#16191d" text-anchor="middle">э</text>
 <rect x="789" y="178" width="130" height="55" rx="8" fill="#eceef2" stroke="#d5dae1" stroke-width="1"/>
 <text x="854" y="211.5" font-size="16" fill="#98a0ad" text-anchor="middle">⏎</text>
 <rect x="24" y="238" width="130" height="55" rx="8" fill="#eceef2" stroke="#d5dae1" stroke-width="1"/>

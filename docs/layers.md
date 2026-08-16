@@ -37,15 +37,19 @@ here on the `\|` key.
 </picture>
 
 Where a Cyrillic letter covers a US punctuation key, ⌥ hands that key's English
-character back. `[` `]` on **⌥Х** and **⌥Ї**, `'` and `"` on **⌥Є**, `` ` `` on
-the apostrophe key, `|` on the `/` key, `<` `>` on **⌥Б** and **⌥Ю**. The English
-quotes `“` `”` are on **⌥9** and **⌥0**, and `(` `)` on **⌥Р**.
+character back. `[` `]` on **⌥Х** and **⌥Ї**, `` ` `` on the apostrophe key, `|`
+on the `/` key, `<` `>` on **⌥Б** and **⌥Ю**. The English quotes `“` `”` are on
+**⌥9** and **⌥0**, `(` `)` on **⌥Р**, and ASCII `'` `"` on **⌥=** and **⇧⌥=**.
+
+The Cyrillic letters take precedence over that rule, because they follow one of
+their own: each sits on the key of its Ukrainian counterpart — `ё` on **Е**, `э`
+on **Є**, `ъ` on **Ь**, `ґ` on **Г**, `ы` on **І**.
 
 The rest is what a Ukrainian layout is expected to carry: non-Ukrainian Cyrillic
 (`ј џ ќ ё њ ѕ ў ъ ы ћ љ э ђ и`), typographic marks and maths.
 
 Worth knowing that `‘` U+2018 is on **⌥З**, `’` U+2019 on **⇧⌥З**, and ASCII `'`
-on **⌥Є**, if you need any of them alongside the U+02BC apostrophe.
+on **⌥=**, if you need any of them alongside the U+02BC apostrophe.
 
 ## Shift + Option
 

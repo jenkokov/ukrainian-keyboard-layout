@@ -51,7 +51,7 @@
 <rect x="744" y="24" width="55" height="55" rx="8" fill="#f7f8fa" stroke="#d5dae1" stroke-width="1"/>
 <text x="755" y="67" font-size="21" fill="#16191d" text-anchor="start">=</text>
 <text x="755" y="44" font-size="14" fill="#6d7480" text-anchor="start">+</text>
-<text x="789" y="67" font-size="13" fill="#98a0ad" text-anchor="end">э</text>
+<text x="789" y="67" font-size="13" fill="#98a0ad" text-anchor="end">'</text>
 <rect x="804" y="24" width="115" height="55" rx="8" fill="#eceef2" stroke="#d5dae1" stroke-width="1"/>
 <text x="861.5" y="57.5" font-size="16" fill="#98a0ad" text-anchor="middle">⌫</text>
 <rect x="24" y="84" width="85" height="55" rx="8" fill="#eceef2" stroke="#d5dae1" stroke-width="1"/>
@@ -130,7 +130,7 @@
 <text x="714" y="187" font-size="13" fill="#98a0ad" text-anchor="end">…</text>
 <rect x="729" y="144" width="55" height="55" rx="8" fill="#f7f8fa" stroke="#d5dae1" stroke-width="1"/>
 <text x="740" y="187" font-size="21" fill="#16191d" text-anchor="start">є</text>
-<text x="774" y="187" font-size="13" fill="#98a0ad" text-anchor="end">'</text>
+<text x="774" y="187" font-size="13" fill="#98a0ad" text-anchor="end">э</text>
 <rect x="789" y="144" width="130" height="55" rx="8" fill="#eceef2" stroke="#d5dae1" stroke-width="1"/>
 <text x="854" y="177.5" font-size="16" fill="#98a0ad" text-anchor="middle">⏎</text>
 <rect x="24" y="204" width="130" height="55" rx="8" fill="#eceef2" stroke="#d5dae1" stroke-width="1"/>

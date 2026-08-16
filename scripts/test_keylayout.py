@@ -226,7 +226,7 @@ class LayoutTests(unittest.TestCase):
     def test_alternative_apostrophes_are_where_the_docs_say(self):
         """README and docs/layers.md send people to these three keys when they
         need an apostrophe that is not U+02BC. Pin them; prose drifts."""
-        self.assertEqual(self.layout.plane("option")[39], "'")  # ⌥Є
+        self.assertEqual(self.layout.plane("option")[24], "'")  # ⌥=
         self.assertEqual(self.layout.plane("shift+option")[35], "’")  # ⇧⌥З
         self.assertEqual(self.layout.plane("option")[35], "‘")  # ⌥З
 
@@ -240,6 +240,18 @@ class LayoutTests(unittest.TestCase):
         shift_option = self.layout.plane("shift+option")
         self.assertEqual((option[33], option[30]), ("[", "]"))
         self.assertEqual((shift_option[33], shift_option[30]), ("{", "}"))
+
+    def test_cyrillic_extras_sit_on_their_counterpart_key(self):
+        """The ⌥ layer's non-Ukrainian Cyrillic is not scattered: each letter sits
+        on the key of the Ukrainian letter it corresponds to. That is the most
+        guessable thing about the layer, and it outranks putting one more US
+        punctuation character in a convenient place."""
+        option = self.layout.plane("option")
+        base = self.layout.plane("base")
+        for host, extra in (("е", "ё"), ("є", "э"), ("ь", "ъ"), ("г", "ґ"),
+                            ("і", "ы"), ("н", "њ"), ("л", "љ"), ("й", "ј")):
+            code = next(c for c, out in base.items() if out == host)
+            self.assertEqual(option[code], extra, f"⌥{host} should give {extra}")
 
     def test_quote_pairs_share_the_number_row(self):
         """9 and 0 are the quote keys: ⌥ gives the English pair, ⇧⌥ the Ukrainian

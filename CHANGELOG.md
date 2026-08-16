@@ -18,8 +18,11 @@ a rearrangement cannot quietly drop something.
   keycode 50 and `{` `}` on keycode 4, both pairs with the *closing* bracket on
   ⌥ and the opening one on ⇧⌥.
 
-- **`'` on ⌥Є and `"` on ⇧⌥Є** — keycode 39, the US apostrophe key. `э` `Э` moved
-  to ⌥= and ⇧⌥=.
+- **ASCII `'` and `"` on ⌥= and ⇧⌥=.** They went to the US apostrophe key (⌥Є)
+  first, which was wrong: `э` lives there, and the non-Ukrainian Cyrillic letters
+  each sit on the key of their Ukrainian counterpart — `ё` on Е, `ъ` on Ь, `ґ` on
+  Г. That pattern is worth more than one more US position, so the letters keep
+  their keys and the punctuation takes the free slots.
 
 - **`` ` `` on ⌥ and `~` on ⇧⌥ of the ʼ key** — keycode 50, the US backtick key.
   `~` had been occupying both option slots of the `ь` key; it now has one home.

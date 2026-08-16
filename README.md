@@ -30,7 +30,7 @@ what you want in Ukrainian: it keeps `пʼять` a single word, so double-click
 selects the whole thing and a line break never lands inside it.
 
 The one catch worth knowing: text typed with `ʼ` will not match text typed with
-`'` or `’` in a naive search. If you need the others, ASCII `'` is on **⌥Є** and
+`'` or `’` in a naive search. If you need the others, ASCII `'` is on **⌥=** and
 `’` on **⇧⌥З**.
 
 ### `/` without shift
@@ -48,9 +48,13 @@ Cyrillic just put х and ї on top of them. So the bracket you reach for in Engl
 is the bracket you reach for here, with ⌥ held. One position to remember instead
 of two.
 
-The same idea runs through the whole ⌥ layer: where a Cyrillic letter covered a
-punctuation key, ⌥ gives that key's English character back. `'` and `"` on **Є**,
-`` ` `` and `~` on the apostrophe key, `|` on the `/` key.
+The same idea runs through the ⌥ layer wherever a key has room: `` ` `` and `~`
+on the apostrophe key, `|` on the `/` key, `<` `>` on **Б** and **Ю**.
+
+Where it doesn't have room, the letter wins. `э` stays on **Є**, `ё` on **Е**,
+`ъ` on **Ь** — each non-Ukrainian Cyrillic letter sits on the key of its
+counterpart, which is a better thing to be able to guess. ASCII `'` and `"` are
+on the **=** key instead.
 
 ### Quotes on 9 and 0
 
