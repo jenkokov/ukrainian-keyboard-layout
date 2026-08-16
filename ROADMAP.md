@@ -7,7 +7,7 @@ unticked below is deferred work, roughly in the order it makes sense to do.
 ## Phase 2 — the layout changes
 
 The point of the fork. `src/Ukrainian - Mac PC.keylayout` now differs from
-upstream in 23 cells across seven physical keys; see `CHANGELOG.md`.
+upstream in 43 cells across fourteen physical keys; see `CHANGELOG.md`.
 
 - [x] Apply the mapping changes
 - [ ] Test each change locally (`./scripts/install-local.sh`, log out, log back in)
@@ -56,7 +56,8 @@ runs `git diff --exit-code` — a mapping change with a stale diagram fails the 
 
 ## Phase 4 — docs
 
-- [x] README: rewrite around the diagrams, lead with what differs from upstream
+- [x] README: rewrite around the diagrams, led by what the layout does rather
+      than by a diff against a layout the reader may never have used
 - [ ] Install section: screenshots of the System Settings flow, which is the step
       people actually get stuck on
 - [x] Uninstall instructions (remove the bundle, log out; the input source also has

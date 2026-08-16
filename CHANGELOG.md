@@ -4,34 +4,38 @@
 
 ### Changed
 
-The ⌥ and ⇧⌥ planes are rearranged, with ⌥ following the US layout wherever
-Cyrillic displaced a punctuation key. This is a pure rearrangement: taken
-together, the two planes carry exactly the same characters as upstream, with the
-same number of keys for each. `scripts/upstream-option-layers.txt` records that
-multiset and `scripts/test_keylayout.py` asserts it every build.
+The ⌥ and ⇧⌥ planes are reorganised around one rule: **where a Cyrillic letter
+covers a US punctuation key, ⌥ gives that key's English character back.** Typing
+Ukrainian and code in the same day should not mean learning a second set of
+positions for the same symbols.
 
-- **`[` `]` moved to ⌥Х and ⌥Ї, and `{` `}` to ⇧⌥Х and ⇧⌥Ї** — keycodes 33 and 30,
-  which are the physical keys a US keyboard puts the brackets on. Holding ⌥ now
-  reaches the same bracket key you already use in English, in the same order.
+Nothing became untypeable. `scripts/option-layer-inventory.txt` lists every
+character these layers can produce and `scripts/test_keylayout.py` asserts it, so
+a rearrangement cannot quietly drop something.
 
-  Upstream scatters them: `[` `]` on keycode 50 and `{` `}` on keycode 4, both
-  pairs with the *closing* bracket on ⌥ and the opening one on ⇧⌥.
+- **`[` `]` on ⌥Х and ⌥Ї, `{` `}` on ⇧⌥Х and ⇧⌥Ї** — keycodes 33 and 30, the
+  physical keys a US keyboard puts the brackets on. Previously `[` `]` were on
+  keycode 50 and `{` `}` on keycode 4, both pairs with the *closing* bracket on
+  ⌥ and the opening one on ⇧⌥.
 
-- **`“` `”` moved to ⌥9 and ⌥0, under `«` `»` on ⇧⌥9 and ⇧⌥0.** Both quote pairs
-  on one pair of keys, opening on 9 and closing on 0 in both layers. `“` was
-  previously on two keys at once; the `“` `„` pair on the `.` key is untouched.
+- **`'` on ⌥Є and `"` on ⇧⌥Є** — keycode 39, the US apostrophe key. `э` `Э` moved
+  to ⌥= and ⇧⌥=.
 
-- **`ъ` `Ъ` moved to ⌥Р and ⇧⌥Р**, the slots the braces vacated.
+- **`` ` `` on ⌥ and `~` on ⇧⌥ of the ʼ key** — keycode 50, the US backtick key.
+  `~` had been occupying both option slots of the `ь` key; it now has one home.
 
-- **`(` `)` are on ⌥` and ⇧⌥`**, where they went when the brackets left the
-  number row. On ⌥9 and ⌥0 they had been duplicating what shift already gives.
+- **`|` on ⌥ of the `/` key** — keycode 42, the US backslash key, completing
+  `/ \ |` on one key. It displaced a second copy of `ё` `Ё`, which remain on `е`.
 
-  **ASCII `'` (U+0027) is now on ⇧⌥=, not ⇧⌥9.** `` ` `` moved with it, to ⌥=.
+- **`<` `>` on ⌥Б and ⌥Ю**, with the maths `≤` `≥` they displaced on ⇧⌥. Writing
+  markup while in a Ukrainian layout is ordinary; typing `≤` is not.
 
-- **`<` and `>` swapped with `≤` and `≥`** on the `б` and `ю` keys (keycodes 43 and
-  47). ASCII angle brackets are now on plain ⌥; the maths symbols they displaced
-  are on ⇧⌥. Writing markup or code while in a Ukrainian layout is ordinary;
-  typing `≤` is not.
+- **`“` `”` on ⌥9 and ⌥0, `«` `»` on ⇧⌥9 and ⇧⌥0.** Both quote pairs on one pair
+  of keys, opening on 9 and closing on 0 in both layers. The `“` `„` pair on the
+  `.` key is untouched.
+
+- **`ъ` `Ъ` on ⌥Ь and ⇧⌥Ь**, the soft sign key giving the hard sign. **`(` `)` on
+  ⌥Р and ⇧⌥Р.**
 
 Applied to the ⇪⌥ plane as well, so caps lock does not change which character
 these keys produce. The ⌘ and ⌃ planes are untouched, as always.

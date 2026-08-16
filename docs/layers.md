@@ -15,9 +15,9 @@ from what the keyboard actually does. Don't edit them by hand — see
   <img alt="Base layer" src="images/layout-base-light.svg">
 </picture>
 
-The apostrophe on the `` ` `` key is **U+02BC ʼ**, and `/` sits unmodified on the
-`\|` key. Those are the only two keys on this layer that differ from upstream
-"Ukrainian - PC".
+The standard Ukrainian typewriter arrangement, with two keys chosen differently:
+the apostrophe is **U+02BC ʼ** rather than `'`, and `/` sits unmodified on the
+`\|` key.
 
 ## Shift
 
@@ -36,16 +36,16 @@ here on the `\|` key.
   <img alt="Option layer" src="images/layout-option-light.svg">
 </picture>
 
-Mostly inherited from upstream: non-Ukrainian Cyrillic
+Where a Cyrillic letter covers a US punctuation key, ⌥ hands that key's English
+character back. `[` `]` on **⌥Х** and **⌥Ї**, `'` and `"` on **⌥Є**, `` ` `` on
+the apostrophe key, `|` on the `/` key, `<` `>` on **⌥Б** and **⌥Ю**. The English
+quotes `“` `”` are on **⌥9** and **⌥0**, and `(` `)` on **⌥Р**.
+
+The rest is what a Ukrainian layout is expected to carry: non-Ukrainian Cyrillic
 (`ј џ ќ ё њ ѕ ў ъ ы ћ љ э ђ и`), typographic marks and maths.
 
-This fork rearranges the punctuation. `[` and `]` are on **⌥Х** and **⌥Ї** — the
-two keys that carry the brackets on a US keyboard — and `<` `>` on **⌥Б** and
-**⌥Ю**. The English quotes `“` `”` are on **⌥9** and **⌥0**. `(` `)` sit on
-**⌥`** and **⇧⌥`**, and the Cyrillic hard sign `ъ` moved to **⌥Р**.
-
 Worth knowing that `‘` U+2018 is on **⌥З**, `’` U+2019 on **⇧⌥З**, and ASCII `'`
-on **⇧⌥=**, if you need any of them alongside the U+02BC apostrophe.
+on **⌥Є**, if you need any of them alongside the U+02BC apostrophe.
 
 ## Shift + Option
 
@@ -55,9 +55,10 @@ on **⇧⌥=**, if you need any of them alongside the U+02BC apostrophe.
 </picture>
 
 Capitalised forms of the option layer, plus currency and the remaining
-punctuation. `{` `}` are on **⇧⌥Х** and **⇧⌥Ї**, directly above the brackets;
-`«` `»` on **⇧⌥9** and **⇧⌥0**, above the English quotes; and `≤` `≥` on **⇧⌥Б**
-and **⇧⌥Ю**.
+punctuation — again following US where it can. `{` `}` are on **⇧⌥Х** and
+**⇧⌥Ї**, directly above the brackets; `~` on the apostrophe key, above `` ` ``.
+The Ukrainian quotes `«` `»` are on **⇧⌥9** and **⇧⌥0**, above the English pair,
+and `≤` `≥` on **⇧⌥Б** and **⇧⌥Ю**.
 
 ## Layers not shown
 
