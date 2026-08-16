@@ -222,7 +222,7 @@
             <key code="39" output="Є"/>
             <key code="40" output="Л"/>
             <key code="41" output="Ж"/>
-            <key code="42" output="/"/>
+            <key code="42" output="\"/>
             <key code="43" output="Б"/>
             <key code="44" output=","/>
             <key code="45" output="Т"/>
@@ -658,7 +658,7 @@
             <key code="39" output="є"/>
             <key code="40" output="л"/>
             <key code="41" output="ж"/>
-            <key code="42" output="\"/>
+            <key code="42" output="/"/>
             <key code="43" output="б"/>
             <key code="44" output="."/>
             <key code="45" output="т"/>
@@ -666,7 +666,7 @@
             <key code="47" output="ю"/>
             <key code="48" output="&#x0009;"/>
             <key code="49" output=" "/>
-            <key code="50" output="&#x0027;"/>
+            <key code="50" output="ʼ"/>
             <key code="51" output="&#x0008;"/>
             <key code="52" output="&#x0003;"/>
             <key code="53" output="&#x001B;"/>
@@ -767,7 +767,7 @@
             <key code="39" output="Є"/>
             <key code="40" output="Л"/>
             <key code="41" output="Ж"/>
-            <key code="42" output="\"/>
+            <key code="42" output="/"/>
             <key code="43" output="Б"/>
             <key code="44" output="."/>
             <key code="45" output="Т"/>
@@ -775,7 +775,7 @@
             <key code="47" output="Ю"/>
             <key code="48" output="&#x0009;"/>
             <key code="49" output=" "/>
-            <key code="50" output="&#x0027;"/>
+            <key code="50" output="ʼ"/>
             <key code="51" output="&#x0008;"/>
             <key code="52" output="&#x0003;"/>
             <key code="53" output="&#x001B;"/>
