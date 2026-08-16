@@ -1,6 +1,6 @@
 # Changelog
 
-## Unreleased
+## 0.3.0 — 2026-08-17
 
 ### Changed
 
@@ -45,6 +45,17 @@ a rearrangement cannot quietly drop something.
 
 Applied to the ⇪⌥ plane as well, so caps lock does not change which character
 these keys produce. The ⌘ and ⌃ planes are untouched, as always.
+
+### Documentation
+
+- The README leads with what the layout is rather than with a diff against
+  "Ukrainian - PC", which most readers have never used. The comparison is still
+  there, in one section for the people it serves.
+- Install has a Finder path alongside the Terminal one. Copying the bundle into
+  `~/Library/Keyboard Layouts` *is* the installation — there is no double-click
+  installer for keyboard layouts, and nothing said so.
+- The Terminal command is `ditto -x -k` rather than `unzip`, which prompts before
+  replacing an existing copy and leaves a `__MACOSX` folder behind.
 
 ## 0.2.0 — 2026-08-16
 
