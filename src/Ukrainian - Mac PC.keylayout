@@ -405,8 +405,8 @@
             <key code="4" output="("/>
             <key code="5" output="©"/>
             <key code="6" output="ђ"/>
-            <key code="7" output="≈"/>
-            <key code="8" output="≠"/>
+            <key code="7" output="&#x0027;"/>
+            <key code="8" output="&#x0022;"/>
             <key code="9" output="µ"/>
             <key code="10" output="§"/>
             <key code="11" output="и"/>
@@ -422,7 +422,7 @@
             <key code="21" output="$"/>
             <key code="22" output="^"/>
             <key code="23" output="%"/>
-            <key code="24" output="&#x0027;"/>
+            <key code="24" output="≈"/>
             <key code="25" output="“"/>
             <key code="26" output="&#x0026;"/>
             <key code="27" output="–"/>
@@ -514,8 +514,8 @@
             <key code="4" output=")"/>
             <key code="5" output="©"/>
             <key code="6" output="Ђ"/>
-            <key code="7" output="≈"/>
-            <key code="8" output="≠"/>
+            <key code="7" output="&#x0027;"/>
+            <key code="8" output="&#x0022;"/>
             <key code="9" output="µ"/>
             <key code="10" output="±"/>
             <key code="11" output="И"/>
@@ -531,7 +531,7 @@
             <key code="21" output="€"/>
             <key code="22" output="¬"/>
             <key code="23" output="∞"/>
-            <key code="24" output="&#x0022;"/>
+            <key code="24" output="≠"/>
             <key code="25" output="«"/>
             <key code="26" output="¶"/>
             <key code="27" output="—"/>
@@ -1059,8 +1059,8 @@
             <key code="4" output="("/>
             <key code="5" output="©"/>
             <key code="6" output="Ђ"/>
-            <key code="7" output="≈"/>
-            <key code="8" output="≠"/>
+            <key code="7" output="&#x0027;"/>
+            <key code="8" output="&#x0022;"/>
             <key code="9" output="µ"/>
             <key code="10" output="§"/>
             <key code="11" output="И"/>
@@ -1076,7 +1076,7 @@
             <key code="21" output="$"/>
             <key code="22" output="^"/>
             <key code="23" output="%"/>
-            <key code="24" output="&#x0027;"/>
+            <key code="24" output="≈"/>
             <key code="25" output="“"/>
             <key code="26" output="&#x0026;"/>
             <key code="27" output="–"/>

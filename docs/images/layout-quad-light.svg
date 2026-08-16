@@ -61,8 +61,8 @@
 <rect x="960" y="24" width="73" height="73" rx="8" fill="#f7f8fa" stroke="#d5dae1" stroke-width="1"/>
 <text x="973" y="83" font-size="23" fill="#16191d" text-anchor="start">=</text>
 <text x="973" y="48" font-size="16" fill="#6d7480" text-anchor="start">+</text>
-<text x="1021" y="83" font-size="16" fill="#7a4fa3" text-anchor="end">'</text>
-<text x="1021" y="48" font-size="14" fill="#a884c4" text-anchor="end">"</text>
+<text x="1021" y="83" font-size="16" fill="#7a4fa3" text-anchor="end">≈</text>
+<text x="1021" y="48" font-size="14" fill="#a884c4" text-anchor="end">≠</text>
 <rect x="1038" y="24" width="151" height="73" rx="8" fill="#eceef2" stroke="#d5dae1" stroke-width="1"/>
 <text x="1113.5" y="66.5" font-size="17" fill="#98a0ad" text-anchor="middle">⌫</text>
 <rect x="24" y="102" width="112" height="73" rx="8" fill="#eceef2" stroke="#d5dae1" stroke-width="1"/>
@@ -157,10 +157,10 @@
 <text x="260.5" y="317" font-size="16" fill="#7a4fa3" text-anchor="end">ђ</text>
 <rect x="277.5" y="258" width="73" height="73" rx="8" fill="#f7f8fa" stroke="#d5dae1" stroke-width="1"/>
 <text x="290.5" y="317" font-size="23" fill="#16191d" text-anchor="start">ч</text>
-<text x="338.5" y="317" font-size="16" fill="#7a4fa3" text-anchor="end">≈</text>
+<text x="338.5" y="317" font-size="16" fill="#7a4fa3" text-anchor="end">'</text>
 <rect x="355.5" y="258" width="73" height="73" rx="8" fill="#f7f8fa" stroke="#d5dae1" stroke-width="1"/>
 <text x="368.5" y="317" font-size="23" fill="#16191d" text-anchor="start">с</text>
-<text x="416.5" y="317" font-size="16" fill="#7a4fa3" text-anchor="end">≠</text>
+<text x="416.5" y="317" font-size="16" fill="#7a4fa3" text-anchor="end">"</text>
 <rect x="433.5" y="258" width="73" height="73" rx="8" fill="#f7f8fa" stroke="#d5dae1" stroke-width="1"/>
 <text x="446.5" y="317" font-size="23" fill="#16191d" text-anchor="start">м</text>
 <text x="494.5" y="317" font-size="16" fill="#7a4fa3" text-anchor="end">µ</text>

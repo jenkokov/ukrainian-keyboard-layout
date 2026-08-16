@@ -226,7 +226,7 @@ class LayoutTests(unittest.TestCase):
     def test_alternative_apostrophes_are_where_the_docs_say(self):
         """README and docs/layers.md send people to these three keys when they
         need an apostrophe that is not U+02BC. Pin them; prose drifts."""
-        self.assertEqual(self.layout.plane("option")[24], "'")  # ⌥=
+        self.assertEqual(self.layout.plane("option")[7], "'")  # ⌥Ч
         self.assertEqual(self.layout.plane("shift+option")[35], "’")  # ⇧⌥З
         self.assertEqual(self.layout.plane("option")[35], "‘")  # ⌥З
 

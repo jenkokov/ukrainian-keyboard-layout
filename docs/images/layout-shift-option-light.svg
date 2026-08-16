@@ -26,7 +26,7 @@
 <rect x="684" y="58" width="55" height="55" rx="8" fill="#f7f8fa" stroke="#d5dae1" stroke-width="1"/>
 <text x="711.5" y="93.5" font-size="22" fill="#16191d" text-anchor="middle">—</text>
 <rect x="744" y="58" width="55" height="55" rx="8" fill="#f7f8fa" stroke="#d5dae1" stroke-width="1"/>
-<text x="771.5" y="93.5" font-size="22" fill="#16191d" text-anchor="middle">"</text>
+<text x="771.5" y="93.5" font-size="22" fill="#16191d" text-anchor="middle">≠</text>
 <rect x="804" y="58" width="115" height="55" rx="8" fill="#eceef2" stroke="#d5dae1" stroke-width="1"/>
 <text x="861.5" y="91.5" font-size="16" fill="#98a0ad" text-anchor="middle">⌫</text>
 <rect x="24" y="118" width="85" height="55" rx="8" fill="#eceef2" stroke="#d5dae1" stroke-width="1"/>
@@ -88,9 +88,9 @@
 <rect x="159" y="238" width="55" height="55" rx="8" fill="#f7f8fa" stroke="#d5dae1" stroke-width="1"/>
 <text x="186.5" y="273.5" font-size="22" fill="#16191d" text-anchor="middle">Ђ</text>
 <rect x="219" y="238" width="55" height="55" rx="8" fill="#f7f8fa" stroke="#d5dae1" stroke-width="1"/>
-<text x="246.5" y="273.5" font-size="22" fill="#16191d" text-anchor="middle">≈</text>
+<text x="246.5" y="273.5" font-size="22" fill="#16191d" text-anchor="middle">'</text>
 <rect x="279" y="238" width="55" height="55" rx="8" fill="#f7f8fa" stroke="#d5dae1" stroke-width="1"/>
-<text x="306.5" y="273.5" font-size="22" fill="#16191d" text-anchor="middle">≠</text>
+<text x="306.5" y="273.5" font-size="22" fill="#16191d" text-anchor="middle">"</text>
 <rect x="339" y="238" width="55" height="55" rx="8" fill="#f7f8fa" stroke="#d5dae1" stroke-width="1"/>
 <text x="366.5" y="273.5" font-size="22" fill="#16191d" text-anchor="middle">µ</text>
 <rect x="399" y="238" width="55" height="55" rx="8" fill="#f7f8fa" stroke="#d5dae1" stroke-width="1"/>
