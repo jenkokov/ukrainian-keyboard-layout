@@ -8,7 +8,7 @@ set -euo pipefail
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 cd "$ROOT"
 
-# shellcheck source=../layout.conf
+# shellcheck source=layout.conf
 source layout.conf
 
 VERSION="${1:-}"
