@@ -1,16 +1,17 @@
 # Roadmap
 
-Phase 1 is done: the repo builds a valid bundle from source and publishes it on a
-tag. Everything below is deferred work, roughly in the order it makes sense to do.
+Phases 1–3 are done: the repo builds a valid bundle from source, publishes it on a
+tag, and generates its own layout diagrams from the `.keylayout`. Everything still
+unticked below is deferred work, roughly in the order it makes sense to do.
 
 ## Phase 2 — the layout changes
 
 The point of the fork. `src/Ukrainian - Mac PC.keylayout` is currently
 byte-identical to upstream except the `<keyboard>` identity line.
 
-- [ ] Apply the mapping changes
+- [x] Apply the mapping changes
 - [ ] Test each change locally (`./scripts/install-local.sh`, log out, log back in)
-- [ ] Record what changed and why in `CHANGELOG.md` — for a keyboard layout the
+- [x] Record what changed and why in `CHANGELOG.md` — for a keyboard layout the
       "why" is the part nobody can reconstruct from a diff of key codes
 - [ ] Tag `v1.0.0` once the mappings settle
 
@@ -25,31 +26,31 @@ SVG diagrams generated from the `.keylayout` itself, so they can never drift fro
 the source. Output goes to `docs/images/`, is committed, and CI regenerates it and
 runs `git diff --exit-code` — a mapping change with a stale diagram fails the build.
 
-- [ ] `scripts/keylayout.py` — shared parser producing `{(keycode, modifiers): output}`.
+- [x] `scripts/keylayout.py` — shared parser producing `{(keycode, modifiers): output}`.
       The XML 1.1 normalisation currently in `validate.py` moves here, and
       `validate.py` imports it instead.
-- [ ] Modifier resolution inside that parser. Do **not** hardcode "map 5 is base";
+- [x] Modifier resolution inside that parser. Do **not** hardcode "map 5 is base";
       `modifierMap` is an ordered match table and has to be evaluated as one:
       a bare token means the modifier must be down, a `?` suffix means it may be,
       an unmentioned modifier must be up, `anyShift` matches either side, and the
       first matching `keyMapSelect` in document order wins. `resolve({})` → map 5,
       `resolve({shift})` → map 1, `resolve({command})` → map 0. Unit-test this;
       everything downstream is wrong if it is wrong.
-- [ ] Geometry table: virtual keycode → row, column, keycap width. This is the one
+- [x] Geometry table: virtual keycode → row, column, keycap width. This is the one
       thing not derivable from the file and has to be hardcoded (`0`→A, `12`→Q,
       `49`→space). Guard it with an assertion that the base plane's upper letter row
       reads `йцукенгшщзхї`, so an off-by-one fails loudly instead of rendering a
       subtly wrong picture.
-- [ ] `scripts/render.py` → deterministic SVG. No timestamps, no generated IDs, so
+- [x] `scripts/render.py` → deterministic SVG. No timestamps, no generated IDs, so
       diffs stay readable.
-- [ ] Two files per diagram (light/dark), referenced from the README with
+- [x] Two files per diagram (light/dark), referenced from the README with
       `<picture>` and `prefers-color-scheme`. A single SVG carrying a CSS media
       query does not reliably follow the theme on GitHub.
-- [ ] Render both keycap styles off the same code, differing only in the keycap
+- [x] Render both keycap styles off the same code, differing only in the keycap
       template: a combined diagram (base + shift + option on one cap) as the README
       hero, and one diagram per plane (base, shift, option, shift+option) for the
       docs, which is far more readable for the option layer.
-- [ ] Skip the ⌘/control planes in the docs — maps 0, 2, 7 and 8 are Latin
+- [x] Skip the ⌘/control planes in the docs — maps 0, 2, 7 and 8 are Latin
       passthrough and control characters, not part of the Ukrainian layout.
 - [ ] A real `src/icon.icns` — currently inherited from upstream, so the layout is
       visually indistinguishable from it in the input menu. Needs to be a distinct
@@ -57,12 +58,12 @@ runs `git diff --exit-code` — a mapping change with a stale diagram fails the 
 
 ## Phase 4 — docs
 
-- [ ] README: rewrite around the diagrams, lead with what differs from upstream
+- [x] README: rewrite around the diagrams, lead with what differs from upstream
 - [ ] Install section: screenshots of the System Settings flow, which is the step
       people actually get stuck on
-- [ ] Uninstall instructions (remove the bundle, log out; the input source also has
+- [x] Uninstall instructions (remove the bundle, log out; the input source also has
       to be removed in System Settings or it lingers as a ghost entry)
-- [ ] Troubleshooting: layout not appearing after install is nearly always a missed
+- [x] Troubleshooting: layout not appearing after install is nearly always a missed
       logout, or two layouts sharing a bundle ID
 - [ ] `CONTRIBUTING.md` if this goes beyond personal use
 

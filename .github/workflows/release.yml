@@ -20,6 +20,17 @@ jobs:
         with:
           fetch-depth: 0
 
+      # The diagrams are generated from the .keylayout and committed. Regenerate
+      # them here: a mapping change that leaves a stale diagram behind fails the
+      # build rather than shipping a README that lies about the layout.
+      - name: Diagrams are current
+        run: |
+          python3 scripts/render.py src/*.keylayout docs/images
+          if ! git diff --exit-code -- docs/images; then
+            echo "::error::docs/images is stale — run scripts/render.py and commit the result"
+            exit 1
+          fi
+
       - name: Build
         id: build
         run: |

@@ -39,6 +39,14 @@ fi
 
 python3 scripts/validate.py "$KEYLAYOUT"
 
+# The resolver and the geometry table are what the diagrams are built on, and
+# both fail silently-but-wrongly. Cheap enough to run on every build.
+if ! test_output="$(python3 scripts/test_keylayout.py 2>&1)"; then
+	echo "$test_output" >&2
+	exit 1
+fi
+echo "    $(printf '%s' "$test_output" | grep -c '\.\.\. ok') unit tests passed"
+
 # --- assemble --------------------------------------------------------------
 rm -rf "$BUNDLE" "$ARCHIVE"
 mkdir -p "$BUNDLE/Contents/Resources/en.lproj"

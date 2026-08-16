@@ -3,27 +3,15 @@
 
 xmllint can't help here: .keylayout is XML 1.1 (it needs C0 control characters
 in `output` attributes, which XML 1.0 forbids) and libxml2 only implements 1.0.
-So we normalise the document down to something an XML 1.0 parser accepts, then
-check the invariants macOS actually cares about — the ones that make a layout
-silently fail to load rather than error visibly.
+keylayout.load() normalises the document down to something an XML 1.0 parser
+accepts; this script then checks the invariants macOS actually cares about — the
+ones that make a layout silently fail to load rather than error visibly.
 """
 
-import re
 import sys
 import xml.etree.ElementTree as ET
 
-# C0 controls are legal output in XML 1.1 but unparseable as XML 1.0. Swap them
-# for a placeholder before parsing; we only inspect structure, not the glyphs.
-CONTROL_REF = re.compile(r"&#x00(0[0-9a-fA-F]|1[0-9a-fA-F]);")
-
-
-def load(path):
-    with open(path, encoding="utf-8") as fh:
-        text = fh.read()
-    text = text.replace('<?xml version="1.1"', '<?xml version="1.0"', 1)
-    text = CONTROL_REF.sub("�", text)
-    text = re.sub(r"<!DOCTYPE[^>]*>", "", text, count=1)
-    return ET.fromstring(text)
+from keylayout import load
 
 
 def main(path):

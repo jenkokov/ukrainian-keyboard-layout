@@ -14,13 +14,15 @@
   but text typed with it will not match text typed with U+0027 or U+2019 under a
   naive search.
 
-  ASCII `'` (U+0027) is still available on **⇧⌥9**, and ’ (U+2019) on **⇧⌥П**.
-  The ⌘ plane is untouched, so ⌘' shortcuts still send U+0027.
+  ASCII `'` (U+0027) is still available on **⇧⌥9**, and ’ (U+2019) on **⇧⌥З**
+  (with ‘ U+2018 on **⌥З**).
+  The ⌘ plane is untouched — it is the US ANSI layout key for key — so ⌘`
+  still cycles windows and ⌘' still reaches the ANSI quote key.
 
 - **`/` and `\` swapped** on the `\|` key (keycode 42): `/` is now unmodified and
   `\` is on shift. Slash is far more common in ordinary Ukrainian typing than
   backslash. Nothing is lost — both characters remain on the same key.
-  ⌘\ still sends a backslash.
+  ⌘\ still sends a backslash, since the ⌘ plane is US ANSI regardless.
 
 Both changes are applied to the caps-lock plane as well, so caps lock does not
 change which character these keys produce.
