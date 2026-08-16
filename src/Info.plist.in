@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleIdentifier</key>
+	<string>@@BUNDLE_ID@@</string>
+	<key>CFBundleName</key>
+	<string>@@LAYOUT_NAME@@</string>
+	<key>CFBundleVersion</key>
+	<string>@@VERSION@@</string>
+	<key>CFBundleShortVersionString</key>
+	<string>@@VERSION@@</string>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>en</string>
+	<key>CFBundlePackageType</key>
+	<string>BNDL</string>
+	<key>KLInfo_@@LAYOUT_NAME@@</key>
+	<dict>
+		<key>TICapsLockLanguageSwitchCapable</key>
+		<true/>
+		<key>TISIconIsTemplate</key>
+		<false/>
+		<key>TISInputSourceID</key>
+		<string>@@BUNDLE_ID@@</string>
+		<key>TISIntendedLanguage</key>
+		<string>@@INTENDED_LANGUAGE@@</string>
+	</dict>
+</dict>
+</plist>
